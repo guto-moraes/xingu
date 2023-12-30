@@ -1,10 +1,10 @@
 <div style="text-align: center;">
-<img src="./public/screenshot.png" alt="./public/screenshot.png" title="Projeto Roncador-Xingu" title="Projeto Roncador-Xingu" /></div>
+<img src="./public/screenshot.png" alt="Projeto Roncador-Xingu" title="Projeto Roncador-Xingu" title="Projeto Roncador-Xingu" /></div>
 
 <div style="text-align: center;margin-block:2rem">
-<img style="display:inline-block" src="https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white" title="Desenvolvido com Astro"/>
-<img style="display:inline-block" src="https://img.shields.io/badge/tailwindcss-0b1120?style=for-the-badge&logo=TailwindCss&logoColor=06B6D4" title="Estilizado com Tailwindcss"/>
-<img style="display:inline-block" src="https://img.shields.io/badge/github%20pages-222222?style=for-the-badge&logo=github&logoColor=white" title="Projeto disponível no GitHub Pages"/>
+<img style="display:inline-block" src="https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white" title="Desenvolvido com Astro" alt="Desenvolvido com Astro"/>
+<img style="display:inline-block" src="https://img.shields.io/badge/tailwindcss-0b1120?style=for-the-badge&logo=TailwindCss&logoColor=06B6D4" title="Estilizado com Tailwindcss" alt="Estilizado com Tailwindcss"/>
+<img style="display:inline-block" src="https://img.shields.io/badge/github%20pages-222222?style=for-the-badge&logo=github&logoColor=white" title="Projeto disponível no GitHub Pages" alt="Projeto disponível no GitHub Pages"/>
 </div>
 
 ## 📑 Sobre o site Projeto Roncador-Xingu
