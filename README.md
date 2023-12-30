@@ -55,7 +55,9 @@ O site do Projeto Roncador-Xingu está estruturado da seguinte forma:
 └── tsconfig.json
 ```
 
-Além do Português como língua padrão, o site suporta tradução de termos, expressões e rotas para os idiomas `inglês` e `espanhol`.
+## 🌐 Idiomas suportados
+
+<p align="justify">Além do Português falado no Brasil, língua padrão do site, já há suporte para a tradução de termos, expressões e rotas para as línguas 🇬🇧 `inglesa` e 🇪🇸 `espanhola`.</p>
 
 ## 👀 Para mais informações
 
