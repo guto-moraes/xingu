@@ -1,6 +1,7 @@
 ---
 import LanguageSelector from "../components/LanguageSelector.astro";
 import Header from "./Header.astro";
+import { getLocaleByPath } from "astro:i18n";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

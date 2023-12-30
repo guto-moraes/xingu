@@ -6,10 +6,19 @@ import { Image } from "astro:assets";
 import Logo from "../assets/images/logo.png";
 ---
 
-<header class="w-full h-20 bg-white shadow-lg">
-  <nav class="max-w-[1280px] mx-auto flex justify-between items-center h-full">
+<header
+  class="w-full h-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 shadow-lg"
+>
+  <nav
+    class="max-w-[1280px] mx-auto px-4 flex justify-between items-center h-full"
+  >
     <div class="brand">
-        <Image src={Logo} alt="Logo do site Desbravando o Sertão" title="Logo do site Desbravando o Sertão" />
+      <Image
+        src={Logo}
+        alt="Logo do site Desbravando o Sertão"
+        title="Logo do site Desbravando o Sertão"
+        class="max-w-[320px]"
+      />
     </div>
     <ul class="list-none flex gap-x-3">
       <li>
@@ -17,7 +26,7 @@ import Logo from "../assets/images/logo.png";
       </li>
       <li>
         <a href="http://">{t("nav.about")}</a>
-      </li>      
+      </li>
       <li>
         <a href="http://">{t("nav.ebook")}</a>
       </li>

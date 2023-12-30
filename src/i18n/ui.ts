@@ -1,19 +1,19 @@
-import brTranslation from "./locales/pt-BR.json";
+import brTranslation from "./locales/pt-br.json";
 import enTranslation from "./locales/en.json";
 import esTranslation from "./locales/es.json";
 
 export const showDefaultLang = false;
 
 export const languages = {
-  "pt-BR": "Português",
+  "pt-br": "Português",
   en: "English",
   es: "Español",
 };
 
-export const defaultLang = "pt-BR";
+export const defaultLang = "pt-br";
 
 export const ui = {
-  "pt-BR": {
+  "pt-br": {
     ...brTranslation
   },
   en: {
