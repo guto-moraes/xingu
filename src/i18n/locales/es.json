@@ -1,5 +1,8 @@
 {
   "nav.home": "Página de Início",
-  "nav.about": "Acerca de Nosotros",
+  "nav.about": "Acerca del Proyecto",
+  "nav.ebook": "E-book",
+  "nav.resources": "Recursos",
+  "nav.contact": "Contacto",  
   "home.hello": "¡Olá, Mundo!"
 }

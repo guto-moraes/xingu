@@ -1,9 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title={t("title") + " | " + t("nav.home")}>

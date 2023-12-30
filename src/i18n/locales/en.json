@@ -1,5 +1,8 @@
 {
   "nav.home": "Home",
-  "nav.about": "About Us",
+  "nav.about": "About the Project",
+  "nav.ebook": "E-book",
+  "nav.resources": "Resources",
+  "nav.contact": "Contact",  
   "home.hello": "Hello, World!"
 }

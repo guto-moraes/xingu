@@ -1,7 +1,9 @@
 {
   "title": "ELiS Editor",
   "nav.home": "Página Inicial",
-  "nav.about": "Sobre Nós",
-  "nav.twitter": "Twitter",
+  "nav.about": "Sobre o Projeto",
+  "nav.ebook": "E-book",
+  "nav.resources": "Recursos",
+  "nav.contact": "Contato",
   "home.hello": "Olá, Mundo!"
 }

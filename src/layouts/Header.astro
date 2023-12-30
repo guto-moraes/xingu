@@ -1,0 +1,32 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+import { Image } from "astro:assets";
+import Logo from "../assets/images/logo.png";
+---
+
+<header class="w-full h-20 bg-white shadow-lg">
+  <nav class="max-w-[1280px] mx-auto flex justify-between items-center h-full">
+    <div class="brand">
+        <Image src={Logo} alt="Logo do site Desbravando o Sertão" title="Logo do site Desbravando o Sertão" />
+    </div>
+    <ul class="list-none flex gap-x-3">
+      <li>
+        <a href="http://">{t("nav.home")}</a>
+      </li>
+      <li>
+        <a href="http://">{t("nav.about")}</a>
+      </li>      
+      <li>
+        <a href="http://">{t("nav.ebook")}</a>
+      </li>
+      <li>
+        <a href="http://">{t("nav.resources")}</a>
+      </li>
+      <li>
+        <a href="http://">{t("nav.contact")}</a>
+      </li>
+    </ul>
+  </nav>
+</header>

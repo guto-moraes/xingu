@@ -1,6 +1,7 @@
 ---
-import LanguageSelector from '../components/LanguageSelector.astro';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import LanguageSelector from "../components/LanguageSelector.astro";
+import Header from "./Header.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const { title } = Astro.props;
@@ -14,6 +15,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+    <Header />
 		<slot />
 		<footer>
 			<LanguageSelector />
