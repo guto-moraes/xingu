@@ -1,0 +1,28 @@
+---
+import LanguageSelector from '../components/LanguageSelector.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		<footer>
+			<LanguageSelector />
+		</footer>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--bg-color: hsl(240, 5%, 96%);
+	}
+	body { background-color: var(--bg-color)}
+</style>
