@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-<img src="./public/images/screenshot.png" alt="Projeto Roncador-Xingu" title="Projeto Roncador-Xingu" title="Projeto Roncador-Xingu" /></div>
+<img src="./src/assets/images/screenshot.png" alt="Projeto Roncador-Xingu" title="Projeto Roncador-Xingu" title="Projeto Roncador-Xingu" /></div>
 
 ## 📑 Sobre o site Projeto Roncador-Xingu
 
