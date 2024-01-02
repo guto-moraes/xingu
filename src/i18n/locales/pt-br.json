@@ -1,9 +1,14 @@
 {
-  "title": "ELiS Editor",
+  "title": "Pireba e Expedição Roncador-Xingu",
   "nav.home": "Página Inicial",
   "nav.about": "Sobre o Projeto",
   "nav.ebook": "E-book",
+  "nav.experience-reports": "Relatos de Experiências",
   "nav.resources": "Recursos",
   "nav.contact": "Contato",
-  "home.hello": "Olá, Mundo!"
+  "lang.portuguese": "Português",
+  "lang.english": "Inglês",
+  "lang.spanish": "Espanhol",
+  "home.hello": "Olá, Mundo!",
+  "footer.copy": "Alguns direitos reservados."
 }

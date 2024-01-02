@@ -2,7 +2,12 @@
   "nav.home": "Página de Início",
   "nav.about": "Acerca del Proyecto",
   "nav.ebook": "E-book",
-  "nav.resources": "Recursos",
+  "nav.experience-reports": "Informes de Experiencias",
+  "nav.resources": "Materiales Adicionales",
   "nav.contact": "Contacto",  
-  "home.hello": "¡Olá, Mundo!"
+  "lang.portuguese": "Portugués",
+  "lang.english": "Inglés",
+  "lang.spanish": "Español", 
+  "home.hello": "¡Olá, Mundo!",
+  "footer.copy": "Algunos direchos reservados."
 }

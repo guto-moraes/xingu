@@ -1,13 +1,92 @@
 ---
-import { languages } from '../i18n/ui';
-import { getLangFromUrl, useTranslatedPath } from '../i18n/utils';
-const lang = getLangFromUrl(Astro.url);
-const translatePath = useTranslatedPath(lang);
+import { languages } from "../i18n/ui";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
+const langUrl = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(langUrl);
+const t = useTranslations(langUrl);
+import { className, getCurrentLanguage } from "../utils/theme-functions.mjs";
+import { Image } from "astro:assets";
+import brFlag from "../assets/images/br.png";
+import enFlag from "../assets/images/gb.png";
+import esFlag from "../assets/images/es.png";
 ---
-<ul>
-  {Object.entries(languages).map(([lang, label]) => (
-    <li>
-      <a href={translatePath('/', lang)}>{label}</a>
-    </li>
-  ))}
-</ul>
+
+<div class="relative w-max">
+  <div
+    role="button"
+    class="dropdown-btn flex justify-between items-center cursor-pointer mt-[.1825rem]"
+  >
+    <span id="selected-item">
+      <Image 
+        src={langUrl === "pt-br" ? brFlag : langUrl === "en" ? enFlag : esFlag} 
+        alt={langUrl === "pt-br" ? t("lang.portuguese") : langUrl === "en" ? t("lang.english") : t("lang.spanish")} 
+        title={langUrl === "pt-br" ? t("lang.portuguese") : langUrl === "en" ? t("lang.english") : t("lang.spanish")} 
+        class="w-[22px] h-[14px]"
+      />   
+    </span>
+    <span class="ml-1">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="w-4 h-4"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+      </svg>
+    </span>
+  </div>
+  <div
+    class={className(
+      "dropdown-menu absolute rigth-0 flex flex-col w-36 mt-1 py-1 bg-white rounded-md transition-transform z-20",
+      "origin-top-left scale-0 [&.open]:scale-100 opacity-[0.2] [&.open]:opacity-100 text-slate-800"
+    )}
+  >
+    {
+      Object.entries(languages).map(([lang, label]) => (
+        <a
+          class={
+            className(
+              "w-full flex justify-start items-center gap-x-2 text-xs p-2 cursor-pointer hover:bg-zinc-200",
+              t(label) === t(getCurrentLanguage(langUrl)) ? "font-bold" : "font-normal"
+            )
+          }
+          title={t(label)}
+          href={translatePath("/", lang)}
+        >
+          <Image 
+            src={lang === "pt-br" ? brFlag : lang === "en" ? enFlag : esFlag} 
+            title={t(label)} 
+            alt={t(label)} 
+            class="w-[22px] h-[14px]"
+          /> 
+          {t(label)}
+        </a>
+      ))
+    }
+  </div>
+
+  <script>
+    const btnOpenMenu = document.querySelector(".dropdown-btn");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    const langs = document.querySelectorAll(".dropdown-menu button");
+
+    //Dropdown open languages list
+    btnOpenMenu.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("open");
+    });
+
+    //Event listener for each language option
+    langs.forEach( lang => lang.addEventListener("click", () => {
+      dropdownMenu.classList.remove("open");
+    }));
+  </script>
+</div>

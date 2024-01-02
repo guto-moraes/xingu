@@ -1,0 +1,39 @@
+---
+import { className } from "../../utils/theme-functions.mjs";
+import { Image } from "astro:assets";
+import fapemat from "../../assets/images/fapemat.png"
+---
+
+<div class="grid grid-cols-3 gap-x-8 w-full h-full p-16">
+  <div class="col-span-2 flex flex-col justify-center text-white bg-[#0d1f37]/50 rounded-2xl p-16">
+    <h2 class="text-[4.5em] font-black uppercase leading-[1.05em]">Desbravando o sertão,</h2>
+    <h3 class="text-[4.5em] font-black uppercase leading-[1.05em]">conquistando o Brasil</h3>
+    <p class="my-12 p-4 text-lg text-white leading-8 bg-[#0d1f37]/75 shadow-inner rounded-lg">
+      Este <em>site</em> é um dos produtos resultantes da pesquisa "Desbravando o sertão, conquistando o Brasil: 
+      a Expedição Roncador Xingu e a Fundação Brasil Central em Mato Grosso (1943-1967)", uma investigação 
+      acerca da forma como se procedeu a Expedição Roncador-Xingu e a atuação da Fundação Brasil Central na 
+      Expedição dos Irmãos Villas-Boas, realizada no leste de Mato Grosso, na região do Vale do Araguaia. 
+      Desenvolvida sob a supervisão do Prof. Ms. Luiz Gabriel de Souza Nogueira, a pesquisa também contou 
+      com a participação das estudantes da <a href="https://www.instagram.com/escolatiradentesab/" class="text-sky-400 hover:text-stone-400"
+      title="Escola Estadual Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos" target="_blank" 
+      rel="noreferrer noopener">Escola Estadual Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos</a>, 
+      localizada no município de Água Boa-MT. Esta pesquisa foi financiada com recursos da <a href="https://www.fapemat.mt.gov.br/" 
+      title="Fundação de Amparo à Pesquisa do Estado de Mato Grosso - Fapemat" target="_blank" rel="noreferrer noopener" 
+      class="text-sky-400 hover:text-stone-400"> Fundação de Amparo à Pesquisa do Estado de Mato Grosso (Fapemat)</a>.
+    </p>
+    <a href="#" class={
+      className(
+        "w-max py-3 px-5 text-white font-semibold bg-emerald-500 rounded-md",
+        "transition-colors duration-300 hover:text-[#0d1f37] hover:bg-white"
+      )
+    }>Saiba mais</a>
+  </div>
+  <div class="relative">
+    <Image
+      src={fapemat}
+      alt="Fundação de Amparo à Pesquisa do Estado de Mato Grosso - Fapemat"
+      title="Fundação de Amparo à Pesquisa do Estado de Mato Grosso - Fapemat"
+      class="absolute right-0 bottom-0 w-32"
+    />
+  </div>
+</div>

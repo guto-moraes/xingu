@@ -1,13 +1,15 @@
 ---
-import Layout from "../../layouts/Layout.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
-
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+import Layout from "../../layouts/Layout.astro";
+import WrapperHome from "./partials/WrapperHome.astro";
+import HomeContent from "./partials/HomeContent.astro";
 ---
 
 <Layout title={t("title") + " | " + t("nav.home")}>
-	<main>
-		<h1 class="text-2xl font-extrabold">{t("home.hello")}</h1>
-	</main>
+  <WrapperHome>    
+    <HomeContent />   
+  </WrapperHome>
+</Layout>
 </Layout>
