@@ -34,7 +34,7 @@ O site do Projeto Roncador-Xingu está estruturado da seguinte forma:
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   └── Components.astro
 │   ├── i18n/
 │   │   ├── locales/
 │   │   │   ├── en.json
@@ -43,13 +43,18 @@ O site do Projeto Roncador-Xingu está estruturado da seguinte forma:
 │   │   ├── ui.ts
 │   │   └── utils.ts
 │   ├── layouts/
-│   │   └── Layout.astro
+│   │   ├── FooterHome.astro
+│   │   ├── FooterPages.astro
+│   │   ├── Header.astro
+│   │   ├── Layout.astro
+│   │   ├── WrapperHome.astro
+│   │   └── WrapperPages.astro
 │   └── pages/
 │       ├── en/
-│       │   └── index.astro
+│       │   └── pages.astro
 │       ├── es/
-│       │   └── index.astro
-│       └── index.astro
+│       │   └── pages.astro
+│       └── pages.astro
 ├── .gitignore
 ├── .astro.config.mjs
 ├── package-lock.json
