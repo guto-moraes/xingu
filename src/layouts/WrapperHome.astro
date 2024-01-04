@@ -1,7 +1,7 @@
 ---
-import Header from "../../../layouts/Header.astro";
-import FooterHome from "../../../layouts/FooterHome.astro";
-import { className } from "../../../utils/theme-functions.mjs";
+import Header from "./Header.astro";
+import FooterHome from "./FooterHome.astro";
+import { className } from "../utils/theme-functions.mjs";
 ---
 
 <div
@@ -12,10 +12,10 @@ import { className } from "../../../utils/theme-functions.mjs";
   )}
 >
   <div class="relative h-screen grid grid-rows-home-layout">
-    <Header />
-    <main class="relative container-[1280px] mx-autogrid grid-cols-2 w-full h-[calc(100vh - 128px)}">
+    <Header linkColor="text-white" />
+    <main class="grid grid-cols-3 gap-x-8 content-center w-full h-full p-12">
       <slot />
     </main>
     <FooterHome />
-  </main>
+  </div>
 </div>

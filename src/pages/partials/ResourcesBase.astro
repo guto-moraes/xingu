@@ -1,0 +1,16 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+import Layout from "../../layouts/Layout.astro";
+import WrapperPages from "../../layouts/WrapperPages.astro";
+---
+
+<Layout title={t("nav.resources") + " | " + t("title")}>
+  <WrapperPages>
+    <div class="proser">
+      <h1 class="text-3xl text-sky-700 font-extrabold mb-8">{t("nav.resources")}</h1>
+      <slot />
+    </div>
+  </WrapperPages>
+</Layout>

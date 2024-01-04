@@ -2,29 +2,52 @@
 import { className } from "../../../utils/theme-functions.mjs";
 ---
 
-<div class="grid grid-cols-3 gap-x-8 w-full h-full p-16">
-  <div class="col-span-2 flex flex-col justify-center text-white bg-[#0d1f37]/50 rounded-2xl p-16">
-    <h2 class="text-[4.5em] font-black uppercase leading-[1.05em]">Desbravando o sertão,</h2>
-    <h3 class="text-[4.5em] font-black uppercase leading-[1.05em]">conquistando o Brasil</h3>
-    <p class="my-12 p-4 text-lg text-white leading-8 bg-[#0d1f37]/75 shadow-inner rounded-lg">
-      Este <em>site</em> é um dos produtos resultantes da pesquisa "Desbravando o sertão, conquistando o Brasil: 
-      a Expedição Roncador Xingu e a Fundação Brasil Central em Mato Grosso (1943-1967)", uma investigação 
-      acerca da forma como se procedeu a Expedição Roncador-Xingu e a atuação da Fundação Brasil Central na 
-      Expedição dos Irmãos Villas-Boas, realizada no leste de Mato Grosso, na região do Vale do Araguaia. 
-      Desenvolvida sob a supervisão do Prof. Ms. Luiz Gabriel de Souza Nogueira, a pesquisa também contou 
-      com a participação das estudantes da <a href="https://www.instagram.com/escolatiradentesab/" class="text-sky-400 hover:text-stone-400"
-      title="Escola Estadual Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos" target="_blank" 
-      rel="noreferrer noopener">Escola Estadual Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos</a>, 
-      localizada no município de Água Boa-MT. Esta pesquisa foi financiada com recursos da <a href="https://www.fapemat.mt.gov.br/" 
-      title="Fundação de Amparo à Pesquisa do Estado de Mato Grosso - Fapemat" target="_blank" rel="noreferrer noopener" 
-      class="text-sky-400 hover:text-stone-400"> Fundação de Amparo à Pesquisa do Estado de Mato Grosso (Fapemat)</a>.
-    </p>
-    <a href="#" class={
-      className(
-        "w-max py-3 px-5 text-white font-semibold bg-emerald-500 rounded-md",
-        "transition-colors duration-300 hover:text-[#0d1f37] hover:bg-white"
-      )
-    }>Saiba mais</a>
-  </div>
-  <div class="text-white">Outras coisas</div>
+<div
+  class="col-span-2 flex flex-col content-between text-white bg-[#0d1f37]/50 rounded-2xl p-12"
+>
+  <h2 class="text-[4.5em] font-black uppercase leading-[1.05em]">
+    Explorando el sertón,
+  </h2>
+  <h3 class="text-[4.5em] font-black uppercase leading-[1.05em]">
+    conquistando el Brasil
+  </h3>
+  <p
+    class="my-12 p-4 text-lg text-white text-justify leading-8 bg-[#0d1f37]/75 shadow-inner rounded-lg"
+  >
+    Este sítio és uno de los productos que resultán de la investigación
+    "Explorando el sertón, conquistando el Brasil: la Expedición Roncador Xingu
+    e la Fundación Brasil Central en Mato Grosso (1943-1967)", que buscó
+    compreender la manera cómo la Expedición Roncador-Xingu fue realizada e,
+    también, acerca de la participación de la Fundación Brasil Central en la
+    Expedición de los Ermanos Villas-Boas, que se passó en el este del estado de
+    Mato Grosso, en la región del Vale del Araguaia. Su deserrollo ocurrió bajo
+    la supervisión del mestre Luiz Gabriel de Souza Nogueira, la investigación
+    aún tuve la participación de estudiantes de la <a
+      href="https://www.instagram.com/escolatiradentesab/"
+      class="text-sky-400 hover:text-stone-400"
+      title="Escuela Estatal Militar Tiradentes 3° Sgt PM Justino Pinheiro 
+      dos Santos"
+      target="_blank"
+      rel="noreferrer noopener"
+      >Escuela Estatal Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos</a
+    >, situada en la ciudad de Água Boa, en el estado de Mato Grosso. Esta
+    investigación recebió apoyo financeiro de la <a
+      href="https://www.fapemat.mt.gov.br/"
+      title="Fundación de Apoyo a la Investigación del Estado 
+      de Mato Grosso - Fapemat"
+      target="_blank"
+      rel="noreferrer noopener"
+      class="text-sky-400 hover:text-stone-400"
+    >
+      Fundación de Apoyo a la Investigación del Estado de Mato Grosso - Fapemat</a
+    >.
+  </p>
+  <a
+    href="/acerca-del-proyecto"
+    class={className(
+      "w-max py-3 px-5 text-white font-semibold bg-emerald-500 rounded-md",
+      "transition-colors duration-300 hover:text-[#0d1f37] hover:bg-white"
+    )}>Más información</a
+  >
 </div>
+<div class="text-white">Outras coisas</div>

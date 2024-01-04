@@ -2,29 +2,50 @@
 import { className } from "../../../utils/theme-functions.mjs";
 ---
 
-<div class="grid grid-cols-3 gap-x-8 w-full h-full p-16">
-  <div class="col-span-2 flex flex-col justify-center text-white bg-[#0d1f37]/50 rounded-2xl p-16">
-    <h2 class="text-[4.5em] font-black uppercase leading-[1.05em]">Desbravando o sertão,</h2>
-    <h3 class="text-[4.5em] font-black uppercase leading-[1.05em]">conquistando o Brasil</h3>
-    <p class="my-12 p-4 text-lg text-white leading-8 bg-[#0d1f37]/75 shadow-inner rounded-lg">
-      Este <em>site</em> é um dos produtos resultantes da pesquisa "Desbravando o sertão, conquistando o Brasil: 
-      a Expedição Roncador Xingu e a Fundação Brasil Central em Mato Grosso (1943-1967)", uma investigação 
-      acerca da forma como se procedeu a Expedição Roncador-Xingu e a atuação da Fundação Brasil Central na 
-      Expedição dos Irmãos Villas-Boas, realizada no leste de Mato Grosso, na região do Vale do Araguaia. 
-      Desenvolvida sob a supervisão do Prof. Ms. Luiz Gabriel de Souza Nogueira, a pesquisa também contou 
-      com a participação das estudantes da <a href="https://www.instagram.com/escolatiradentesab/" class="text-sky-400 hover:text-stone-400"
-      title="Escola Estadual Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos" target="_blank" 
-      rel="noreferrer noopener">Escola Estadual Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos</a>, 
-      localizada no município de Água Boa-MT. Esta pesquisa foi financiada com recursos da <a href="https://www.fapemat.mt.gov.br/" 
-      title="Fundação de Amparo à Pesquisa do Estado de Mato Grosso - Fapemat" target="_blank" rel="noreferrer noopener" 
-      class="text-sky-400 hover:text-stone-400"> Fundação de Amparo à Pesquisa do Estado de Mato Grosso (Fapemat)</a>.
-    </p>
-    <a href="#" class={
-      className(
-        "w-max py-3 px-5 text-white font-semibold bg-emerald-500 rounded-md",
-        "transition-colors duration-300 hover:text-[#0d1f37] hover:bg-white"
-      )
-    }>Saiba mais</a>
-  </div>
-  <div class="text-white">Outras coisas</div>
+<div
+  class="col-span-2 flex flex-col content-between text-white bg-[#0d1f37]/50 rounded-2xl p-12"
+>
+  <h2 class="text-[4.5em] font-black uppercase leading-[1.05em]">
+    Exploring the wilderness,
+  </h2>
+  <h3 class="text-[4.5em] font-black uppercase leading-[1.05em]">
+    Conquering the Brazil
+  </h3>
+  <p
+    class="my-12 p-4 text-lg text-white text-justify leading-8 bg-[#0d1f37]/75 shadow-inner rounded-lg"
+  >
+    This site is one of products that resulting of research "Exploring the
+    wilderness, conquering the Brazil: the Exploration Roncador Xingu and the
+    Brasil Central Fundation in Mato Grosso state (1943-1967)", a investigation
+    about the methods of the Expedition Roncador-Xingu and the action of the
+    Brasil Central Fundation in the Villas-Boas Brothers Expedition, occoured in
+    the est of Mato Grosso state, in the Araguaia Valley region. The teacher Ms.
+    Luiz Gabriel de Souza Nogueira oversaw the investigation process that had
+    the participation of students of the <a
+      href="https://www.instagram.com/escolatiradentesab/"
+      class="text-sky-400
+      hover:text-stone-400"
+      title="3° Sgt PM Justino Pinheiro dos Santos - Tiradentes Military State School"
+      target="_blank"
+      rel="noreferrer noopener"
+      >3° Sgt PM Justino Pinheiro dos Santos - Tiradentes Military State School</a
+    >, situed in Água Boa county, Mato Grosso state. This research received
+    financial support of
+    <a
+      href="https://www.fapemat.mt.gov.br/"
+      title="Mato Grosso State Research Support Fundation - Fapemat"
+      target="_blank"
+      rel="noreferrer noopener"
+      class="text-sky-400 hover:text-stone-400"
+      >Mato Grosso State Research Support Fundation - (Fapemat)</a
+    >.
+  </p>
+  <a
+    href="/about-project"
+    class={className(
+      "w-max py-3 px-5 text-white font-semibold bg-emerald-500 rounded-md",
+      "transition-colors duration-300 hover:text-[#0d1f37] hover:bg-white"
+    )}>Learn more</a
+  >
 </div>
+<div class="text-white">Outras coisas</div>

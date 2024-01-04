@@ -5,6 +5,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 import { Image } from "astro:assets";
 import Logo from "../assets/images/logo.png";
+const { linkColor } = Astro.props;
 ---
 
 <header class="w-full h-20 shadow-xl">
@@ -17,24 +18,24 @@ import Logo from "../assets/images/logo.png";
         class="max-w-[320px]"
       />
     </div>
-    <ul class="list-none flex gap-x-3 text-sm text-white">
+    <ul class={`list-none flex gap-x-3 text-sm ${linkColor}`}>
       <li>
-        <a href="http://">{t("nav.home")}</a>
+        <a href={t("navlink.home")}>{t("nav.home")}</a>
       </li>
       <li>
-        <a href="http://">{t("nav.about")}</a>
+        <a href={t("navlink.about")}>{t("nav.about")}</a>
       </li>
       <li>
-        <a href="http://">{t("nav.ebook")}</a>
+        <a href={t("navlink.ebook")}>{t("nav.ebook")}</a>
       </li>      
       <li>
-        <a href="http://">{t("nav.experience-reports")}</a>
+        <a href={t("navlink.experience-reports")}>{t("nav.experience-reports")}</a>
       </li>
       <li>
-        <a href="http://">{t("nav.resources")}</a>
+        <a href={t("navlink.resources")}>{t("nav.resources")}</a>
       </li>
       <li>
-        <a href="http://">{t("nav.contact")}</a>
+        <a href={t("navlink.contact")}>{t("nav.contact")}</a>
       </li>
       <li>
         <LanguageSelector />

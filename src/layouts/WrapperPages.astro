@@ -1,0 +1,12 @@
+---
+import Header from "./Header.astro";
+import FooterHome from "./FooterHome.astro";
+---
+
+<div class="relative h-screen grid grid-rows-home-layout">
+  <Header linkColor="text-slate-700" />
+  <main class="max-w-[1280px] mx-auto p-12">
+    <slot />
+  </main>
+  <FooterHome />
+</div>

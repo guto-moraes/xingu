@@ -3,7 +3,7 @@ import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 import Layout from "../../layouts/Layout.astro";
-import WrapperHome from "./partials/WrapperHome.astro";
+import WrapperHome from "../../layouts/WrapperHome.astro";
 import HomeContent from "./partials/HomeContent.astro";
 ---
 
