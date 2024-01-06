@@ -1,7 +1,9 @@
 ---
 import { className } from "../../utils/theme-functions.mjs";
 import { Image } from "astro:assets";
+import ebook from "../../assets/images/ebook.png";
 import fapemat from "../../assets/images/fapemat.png";
+import school from "../../assets/images/escola.png";
 ---
 
 <div
@@ -51,11 +53,56 @@ import fapemat from "../../assets/images/fapemat.png";
     )}>Saiba mais</a
   >
 </div>
-<div class="relative">
-  <Image
-    src={fapemat}
-    alt="Fundação de Amparo à Pesquisa do Estado de Mato Grosso - Fapemat"
-    title="Fundação de Amparo à Pesquisa do Estado de Mato Grosso - Fapemat"
-    class="absolute right-0 bottom-0 w-32"
-  />
+<div class="relative h-full">
+  <div class="grid grid-rows-3 gap-y-8 h-full">
+    <div class="row-span-2 flex justify-between items-center gap-x-6 p-4 bg-slate-900/50 rounded-2xl">
+      <div>
+        <h2 class="text-3xl text-white font-extrabold">E-book Interativo</h2>
+        <p class="text-white font-medium my-6">
+          Outro produto do projeto foi a elaboração de um livro virtual interativo, cujo principal objetivo é o de servir como apoio
+          pedagógico para discussões sobre os impactos da expedição na região do Vale do Araguaia, no leste de Mato Grosso.
+        </p>
+        <a type="button" href="/book" title="Baixar o E-book" class="btn-download w-full transform-colors duration-200">Baixar o E-book</a>
+      </div>
+      <a href="./book" class="book-link">
+        <Image
+          src={ebook}
+          alt="E-book"
+          title="E-book"
+          class="max-w-64 book"
+        />
+      </a>
+    </div>
+    <div class="flex flex-col justify-between h-full p-4 bg-slate-900/50 rounded-2xl">
+      <h3 class="text-white text-center font-bold">Apoiaram este projeto</h3>
+      <div class="flex justify-center items-center gap-x-6">
+        <a
+        href="https://www.fapemat.mt.gov.br/"
+        title="Fundação de Amparo à Pesquisa do Estado de Mato Grosso - Fapemat"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Image
+          src={fapemat}
+          alt="Fundação de Amparo à Pesquisa do Estado de Mato Grosso - Fapemat"
+          title="Fundação de Amparo à Pesquisa do Estado de Mato Grosso - Fapemat"
+          class="w-24"
+        />
+      </a>
+        <a
+        href="https://www.instagram.com/escolatiradentesab/"
+        title="Escola Estadual Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Image
+          src={school}
+          alt="Escola Estadual Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos"
+          title="Escola Estadual Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos"
+          class="w-24"
+        />
+      </a>
+      </div>
+    </div>
+  </div>
 </div>

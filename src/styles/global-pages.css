@@ -1,0 +1,21 @@
+.title-page {
+    @apply !text-4xl !text-slate-700 font-extrabold mb-10;
+}
+
+.btn-download {
+    @apply flex justify-center items-center text-2xl text-white font-medium py-3 rounded-lg bg-sky-500 hover:bg-sky-600;
+}
+
+.book-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.book {
+    transform-style: preserve-3d;
+    transform: rotateY(-30deg);
+    transition: 1s ease;
+    box-shadow: 0px 0px 0.625rem 0.625rem rgba(0 0 0 / 10%);
+}

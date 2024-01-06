@@ -2,6 +2,7 @@
 import Header from "./Header.astro";
 import FooterHome from "./FooterHome.astro";
 import { className } from "../utils/theme-functions.mjs";
+import Logo from "../assets/images/logo.png";
 ---
 
 <div
@@ -12,7 +13,7 @@ import { className } from "../utils/theme-functions.mjs";
   )}
 >
   <div class="relative h-screen grid grid-rows-home-layout">
-    <Header linkColor="text-white" />
+    <Header logo={Logo} bgColor="bg-transparent" linkColor="text-white" />
     <main class="grid grid-cols-3 gap-x-8 content-center w-full h-full p-12">
       <slot />
     </main>

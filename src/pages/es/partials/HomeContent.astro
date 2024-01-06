@@ -1,5 +1,9 @@
 ---
 import { className } from "../../../utils/theme-functions.mjs";
+import { Image } from "astro:assets";
+import ebook from "../../../assets/images/ebook.png";
+import fapemat from "../../../assets/images/fapemat.png";
+import school from "../../../assets/images/escola.png";
 ---
 
 <div
@@ -25,16 +29,14 @@ import { className } from "../../../utils/theme-functions.mjs";
     aún tuve la participación de estudiantes de la <a
       href="https://www.instagram.com/escolatiradentesab/"
       class="text-sky-400 hover:text-stone-400"
-      title="Escuela Estatal Militar Tiradentes 3° Sgt PM Justino Pinheiro 
-      dos Santos"
+      title="Escuela Estatal Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos"
       target="_blank"
       rel="noreferrer noopener"
       >Escuela Estatal Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos</a
     >, situada en la ciudad de Água Boa, en el estado de Mato Grosso. Esta
     investigación recebió apoyo financeiro de la <a
       href="https://www.fapemat.mt.gov.br/"
-      title="Fundación de Apoyo a la Investigación del Estado 
-      de Mato Grosso - Fapemat"
+      title="Fundación de Apoyo a la Investigación del Estado de Mato Grosso - Fapemat"
       target="_blank"
       rel="noreferrer noopener"
       class="text-sky-400 hover:text-stone-400"
@@ -50,4 +52,56 @@ import { className } from "../../../utils/theme-functions.mjs";
     )}>Más información</a
   >
 </div>
-<div class="text-white">Outras coisas</div>
+<div class="relative h-full">
+  <div class="grid grid-rows-3 gap-y-8 h-full">
+    <div class="row-span-2 flex justify-between items-center gap-x-6 p-4 bg-slate-900/50 rounded-2xl">
+      <div>
+        <h2 class="text-3xl text-white font-extrabold">E-book Interactivo</h2>
+        <p class="text-white font-medium my-6">
+          A partir del proyecto, también se elaboró uno libro virtual interactivo con el propósito de servir cómo material
+          educativo en discusión acerca de los efectos de la expedición en la región del Vale del Araguaia, en el este de Mato Grosso.
+        </p>
+        <a type="button" href="./book" title="Descargar E-book" class="btn-download w-full transform-colors duration-200">Descargar E-book</a>
+      </div>
+      <a href="./book" class="book-link">
+        <Image
+          src={ebook}
+          alt="E-book"
+          title="E-book"
+          class="max-w-64 book"
+        />
+      </a>
+    </div>
+    <div class="flex flex-col justify-between h-full p-4 bg-slate-900/50 rounded-2xl">
+      <h3 class="text-white text-center font-bold">Apoyaram este proyecto</h3>
+      <div class="flex justify-center items-center gap-x-6">
+        <a
+        href="https://www.fapemat.mt.gov.br/"
+        title="Fundación de Apoyo a la Investigación del Estado de Mato Grosso - Fapemat"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Image
+          src={fapemat}
+          alt="Fundación de Apoyo a la Investigación del Estado de Mato Grosso - Fapemat"
+          title="Fundación de Apoyo a la Investigación del Estado de Mato Grosso - Fapemat"
+          class="w-24"
+        />
+      </a>
+        <a
+        href="https://www.instagram.com/escolatiradentesab/"
+        title="Escuela Estatal Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Image
+          src={school}
+          alt="Escuela Estatal Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos"
+          title="Escuela Estatal Militar Tiradentes 3° Sgt PM Justino Pinheiro dos Santos"
+          class="w-24"
+        />
+      </a>
+      </div>
+    </div>
+  </div>
+</div>

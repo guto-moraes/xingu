@@ -1,9 +1,28 @@
 ---
 import EbookBase from "./partials/EbookBase.astro";
+import { Image } from "astro:assets";
+import ebook from "../assets/images/ebook.png";
 ---
 
 <EbookBase>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non adipisci ullam maxime quidem ducimus reprehenderit culpa minima, fugiat possimus deleniti!
-    </p>
+    <div class="w-full h-full mx-auto bg-white p-16 rounded-2xl shadow-2xl">
+          <div class="flex justify-between items-center gap-x-6">
+            <div class="flex-1">
+              <h2 class="text-3xl text-slate-600 font-extrabold">Mais interatividade para suas aulas sobre a Expedição Roncador-Xingu</h2>
+              <p class="text-slate-800 font-medium my-6">
+                Outro produto do projeto foi a elaboração de um livro virtual interativo, cujo principal objetivo é o de servir como apoio
+                pedagógico para discussões sobre os impactos da expedição na região do Vale do Araguaia, no leste de Mato Grosso.
+              </p>
+              <a type="button" href="/book" title="Baixar o E-book" class="btn-download max-w-56 transform-colors duration-200">Baixar o E-book</a>
+            </div>
+            <a href="./book" class="flex-1 book-link">
+              <Image
+                src={ebook}
+                alt="E-book"
+                title="E-book"
+                class="max-w-80 book"
+              />
+            </a>
+          </div>
+      </div>
 </EbookBase>

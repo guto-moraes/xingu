@@ -1,0 +1,7 @@
+.box-content {
+    @apply prose lg:prose-xl xl:prose-2xl mx-auto mb-10;
+}
+
+.btn-primary {
+    @apply !text-base text-white !px-2 !py-1 bg-sky-500 hover:bg-sky-700 rounded transition-colors duration-200;
+}

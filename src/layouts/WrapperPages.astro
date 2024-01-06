@@ -1,12 +1,15 @@
 ---
 import Header from "./Header.astro";
 import FooterHome from "./FooterHome.astro";
+import Logo from "../assets/images/logo-dois.png";
 ---
 
 <div class="relative h-screen grid grid-rows-home-layout">
-  <Header linkColor="text-slate-700" />
-  <main class="max-w-[1280px] mx-auto p-12">
-    <slot />
+  <Header logo={Logo} bgColor="bg-white" linkColor="text-slate-700" />
+  <main class="w-full h-full my-10">
+    <div class="max-w-[1280px] mx-auto h-full px-4">
+      <slot />
+    </div>
   </main>
   <FooterHome />
 </div>

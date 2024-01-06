@@ -4,12 +4,13 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 import Layout from "../../layouts/Layout.astro";
 import WrapperPages from "../../layouts/WrapperPages.astro";
+import TitlePage from "../../components/TitlePage.astro";
 ---
 
 <Layout title={t("nav.resources") + " | " + t("title")}>
   <WrapperPages>
-    <div class="proser">
-      <h1 class="text-3xl text-sky-700 font-extrabold mb-8">{t("nav.resources")}</h1>
+    <div class="box-content">
+      <TitlePage titlePage={t("nav.resources")} />
       <slot />
     </div>
   </WrapperPages>

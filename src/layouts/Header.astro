@@ -4,15 +4,16 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 import { Image } from "astro:assets";
-import Logo from "../assets/images/logo.png";
 const { linkColor } = Astro.props;
+const { bgColor } = Astro.props;
+const { logo } = Astro.props;
 ---
 
-<header class="w-full h-20 shadow-xl">
+<header class=`w-full h-20 shadow-xl ${bgColor}`>
   <nav class="max-w-[1280px] mx-auto px-4 flex justify-between items-center h-full">
     <div class="brand">
       <Image
-        src={Logo}
+        src={logo}
         alt="Logo do site Desbravando o Sertão"
         title="Logo do site Desbravando o Sertão"
         class="max-w-[320px]"

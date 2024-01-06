@@ -1,5 +1,9 @@
 ---
 import { className } from "../../../utils/theme-functions.mjs";
+import { Image } from "astro:assets";
+import ebook from "../../../assets/images/ebook.png";
+import fapemat from "../../../assets/images/fapemat.png";
+import school from "../../../assets/images/escola.png";
 ---
 
 <div
@@ -17,7 +21,7 @@ import { className } from "../../../utils/theme-functions.mjs";
     This site is one of products that resulting of research "Exploring the
     wilderness, conquering the Brazil: the Exploration Roncador Xingu and the
     Brasil Central Fundation in Mato Grosso state (1943-1967)", a investigation
-    about the methods of the Expedition Roncador-Xingu and the action of the
+    about the methods of the Roncador-Xingu Expedition and the action of the
     Brasil Central Fundation in the Villas-Boas Brothers Expedition, occoured in
     the est of Mato Grosso state, in the Araguaia Valley region. The teacher Ms.
     Luiz Gabriel de Souza Nogueira oversaw the investigation process that had
@@ -48,4 +52,56 @@ import { className } from "../../../utils/theme-functions.mjs";
     )}>Learn more</a
   >
 </div>
-<div class="text-white">Outras coisas</div>
+<div class="relative h-full">
+  <div class="grid grid-rows-3 gap-y-8 h-full">
+    <div class="row-span-2 flex justify-between items-center gap-x-6 p-4 bg-slate-900/50 rounded-2xl">
+      <div>
+        <h2 class="text-3xl text-white font-extrabold">Interactive E-book</h2>
+        <p class="text-white font-medium my-6">
+          Other result this project was the development of the an interactive e-book. This pedagogical resources serve to assist
+          in the discussions about the Roncador-Xingu Expedition impacts in the Araguaia Valley area, in Mato Grosso state.
+        </p>
+        <a type="button" href="/book" title="Download E-book" class="btn-download w-full transform-colors duration-200">Download E-book</a>
+      </div>
+      <a href="./book" class="book-link">
+        <Image
+          src={ebook}
+          alt="E-book"
+          title="E-book"
+          class="max-w-64 book"
+        />
+      </a>
+    </div>
+    <div class="flex flex-col justify-between h-full p-4 bg-slate-900/50 rounded-2xl">
+      <h3 class="text-white text-center font-bold">Suported this project</h3>
+      <div class="flex justify-center items-center gap-x-6">
+        <a
+        href="https://www.fapemat.mt.gov.br/"
+        title="Mato Grosso State Research Support Fundation - Fapemat"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Image
+          src={fapemat}
+          alt="Mato Grosso State Research Support Fundation - Fapemat"
+          title="Mato Grosso State Research Support Fundation - Fapemat"
+          class="w-24"
+        />
+      </a>
+        <a
+        href="https://www.instagram.com/escolatiradentesab/"
+        title="https://www.instagram.com/escolatiradentesab/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Image
+          src={school}
+          alt="https://www.instagram.com/escolatiradentesab/"
+          title="https://www.instagram.com/escolatiradentesab/"
+          class="w-24"
+        />
+      </a>
+      </div>
+    </div>
+  </div>
+</div>

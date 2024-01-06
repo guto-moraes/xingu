@@ -3,6 +3,8 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const { title } = Astro.props;
+import "../styles/global-pages.css";
+import "../styles/global-theme.css";
 ---
 
 <!doctype html>
