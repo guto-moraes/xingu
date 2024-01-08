@@ -1,9 +1,10 @@
 ---
 import { className } from "../../utils/theme-functions.mjs";
 import { Image } from "astro:assets";
-import ebook from "../../assets/images/ebook.png";
+import ebook from "../../assets/images/ebook-cover.png";
 import fapemat from "../../assets/images/fapemat.png";
 import school from "../../assets/images/escola.png";
+import ButtonLink from "../../components/ButtonLink.astro";
 ---
 
 <div
@@ -45,33 +46,35 @@ import school from "../../assets/images/escola.png";
       Fundação de Amparo à Pesquisa do Estado de Mato Grosso (Fapemat)</a
     >.
   </p>
-  <a
-    href="/sobre-o-projeto"
-    class={className(
-      "w-max py-3 px-5 text-white font-semibold bg-emerald-500 rounded-md",
-      "transition-colors duration-300 hover:text-[#0d1f37] hover:bg-white"
-    )}>Saiba mais</a
-  >
+  <ButtonLink
+    link="/sobre-o-projeto"
+    text="Saiba mais"
+    textColor="text-white"
+    bgColor="bg-emerald-500"
+    bgHoverColor="hover:bg-emerald-600"
+  />
 </div>
 <div class="relative h-full">
   <div class="grid grid-rows-3 gap-y-8 h-full">
-    <div class="row-span-2 flex justify-between items-center gap-x-6 p-4 bg-slate-900/50 rounded-2xl">
+    <div class="row-span-2 flex justify-between items-center gap-x-6 p-4 bg-slate-900/75 rounded-2xl">
       <div>
-        <h2 class="text-3xl text-white font-extrabold">E-book Interativo</h2>
+        <h2 class="text-3xl text-white font-extrabold">E-books nos formatos Epub e PDF</h2>
         <p class="text-white font-medium my-6">
-          Outro produto do projeto foi a elaboração de um livro virtual interativo, cujo principal objetivo é o de servir como apoio
-          pedagógico para discussões sobre os impactos da expedição na região do Vale do Araguaia, no leste de Mato Grosso.
+          Ainda como resultado deste projeto, foi elaborado um livro virtual, nos formatos Epub (interativo) e em PDF, cujo
+          principal objetivo é o de servir como material pedagógico sobre a expedição e seus impactos no leste de Mato Grosso.
         </p>
-        <a type="button" href="/book" title="Baixar o E-book" class="btn-download w-full transform-colors duration-200">Baixar o E-book</a>
+        <a type="button" href="/ebooks" title="Baixar E-books" class="btn-download w-full transform-colors duration-200">Baixar E-books</a>
       </div>
-      <a href="./book" class="book-link">
-        <Image
-          src={ebook}
-          alt="E-book"
-          title="E-book"
-          class="max-w-64 book"
-        />
-      </a>
+      <div class="book-container py-4">
+        <a href="./ebook" class="book-link">
+          <Image
+            src={ebook}
+            alt="E-book"
+            title="E-book"
+            class="book"
+          />
+        </a>
+      </div>
     </div>
     <div class="flex flex-col justify-between h-full p-4 bg-slate-900/50 rounded-2xl">
       <h3 class="text-white text-center font-bold">Apoiaram este projeto</h3>

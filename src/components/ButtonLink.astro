@@ -1,0 +1,26 @@
+---
+import { className } from "../utils/theme-functions.mjs";
+const {
+  link,
+  text,
+  textColor,
+  textHoverColor = textColor,
+  bgColor,
+  bgHoverColor = bgColor,
+  borderColor = "border-transparent",
+} = Astro.props;
+---
+
+<a
+  type="button"
+  href={link}
+  title={text}
+  class={
+    className(
+      "w-max text-xl font-semibold py-2 px-5 rounded-md transition-colors duration-300 border-2",
+      textColor, textHoverColor, bgColor, bgHoverColor, borderColor
+    )
+  }
+>
+  {text}
+</a>

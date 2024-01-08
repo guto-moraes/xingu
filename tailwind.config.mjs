@@ -7,8 +7,7 @@ export default {
 				"roncador": "url('../src/assets/images/serra-do-roncador.jpg')",
 			},
 			gridTemplateRows: {
-				"home-layout": "80px 1fr 48px",
-				"pages-layout": "80px 1fr auto",
+				"layout": "100px minmax(calc(1fr - 148px, 1fr) 48px",
 			}
 		},
 	},

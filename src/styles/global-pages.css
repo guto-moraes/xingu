@@ -1,21 +1,52 @@
-.title-page {
-    @apply !text-4xl !text-slate-700 font-extrabold mb-10;
-}
-
-.btn-download {
-    @apply flex justify-center items-center text-2xl text-white font-medium py-3 rounded-lg bg-sky-500 hover:bg-sky-600;
-}
-
-.book-link {
+.book-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 12px;
     perspective: 1000px;
 }
 
-.book {
-    transform-style: preserve-3d;
+.book-link {
+    position: relative;
+    width: 222px;
+    height: 372px;
     transform: rotateY(-30deg);
-    transition: 1s ease;
-    box-shadow: 0px 0px 0.625rem 0.625rem rgba(0 0 0 / 10%);
+    transform-style: preserve-3d;
 }
+
+.book-link > :first-child {
+    position: absolute;
+    width: 222px;
+    height: 372px;
+    background: transparent;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0px 0px 0.625rem 0.625rem rgba(0 0 0 / 10%);
+  }
+
+  .book-link::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    background: hsl(220, 13%, 95%);
+    height: calc(372px - 2 * 3px);
+    width: 50px;
+    transform: translateX(calc(222px - 50px / 2 - 3px)) rotateY(90deg) translateX(calc(50px / 2))
+  }
+  
+  .book-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 222px;
+    height: 372px;
+    background: #01060f;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    transform: translateZ(-50px);
+    box-shadow: 0px 0px 0.625rem 0.625rem rgba(0 0 0 / 10%);
+  }
+
+  .feature-box {
+    @apply flex flex-col content-between items-center gap-y-6 p-4 bg-white rounded-lg shadow-lg;
+  }

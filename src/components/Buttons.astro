@@ -1,0 +1,25 @@
+---
+import { className } from "../utils/theme-functions.mjs";
+const {
+  text,
+  textColor,
+  textHoverColor = textColor,
+  bgColor,
+  bgHoverColor = bgColor,
+  borderColor = "border-transparent",
+} = Astro.props;
+---
+
+<button
+  type="button"
+  title={text}
+  class={
+    className(
+      "flex justify-center items-center w-max text-xl font-semibold py-2 px-5",
+      "rounded-md transition-colors duration-300 border-2",
+      textColor, textHoverColor, bgColor, bgHoverColor, borderColor
+    )
+  }
+>
+  {text}
+</button>

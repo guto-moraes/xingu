@@ -1,7 +1,7 @@
 ---
 import { className } from "../../../utils/theme-functions.mjs";
 import { Image } from "astro:assets";
-import ebook from "../../../assets/images/ebook.png";
+import ebook from "../../../assets/images/ebook-cover.png";
 import fapemat from "../../../assets/images/fapemat.png";
 import school from "../../../assets/images/escola.png";
 ---
@@ -61,16 +61,18 @@ import school from "../../../assets/images/escola.png";
           A partir del proyecto, también se elaboró uno libro virtual interactivo con el propósito de servir cómo material
           educativo en discusión acerca de los efectos de la expedición en la región del Vale del Araguaia, en el este de Mato Grosso.
         </p>
-        <a type="button" href="./book" title="Descargar E-book" class="btn-download w-full transform-colors duration-200">Descargar E-book</a>
+        <a type="button" href="./ebook" title="Descargar E-book" class="btn-download w-full transform-colors duration-200">Descargar E-book</a>
       </div>
-      <a href="./book" class="book-link">
-        <Image
-          src={ebook}
-          alt="E-book"
-          title="E-book"
-          class="max-w-64 book"
-        />
-      </a>
+      <div class="book-container">
+        <a href="./ebook" class="book-link">
+          <Image
+            src={ebook}
+            alt="E-book"
+            title="E-book"
+            class="book"
+          />
+        </a>
+      </div>
     </div>
     <div class="flex flex-col justify-between h-full p-4 bg-slate-900/50 rounded-2xl">
       <h3 class="text-white text-center font-bold">Apoyaram este proyecto</h3>

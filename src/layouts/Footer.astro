@@ -1,0 +1,11 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+const { bgColor, textColor } = Astro.props;
+---
+
+<footer class={`w-full h-12 flex justify-center items-center ${bgColor}`}>
+    <p class={`text-sm font-medium ${textColor}`}>&copy;{year} Pireba. {t("footer.copy")}</p>
+</footer>

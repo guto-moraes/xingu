@@ -9,17 +9,15 @@ const { bgColor } = Astro.props;
 const { logo } = Astro.props;
 ---
 
-<header class=`w-full h-20 shadow-xl ${bgColor}`>
+<header class=`w-full h-[100px] shadow-xl ${bgColor}`>
   <nav class="max-w-[1280px] mx-auto px-4 flex justify-between items-center h-full">
     <div class="brand">
       <Image
         src={logo}
         alt="Logo do site Desbravando o Sertão"
-        title="Logo do site Desbravando o Sertão"
-        class="max-w-[320px]"
       />
     </div>
-    <ul class={`list-none flex gap-x-3 text-sm ${linkColor}`}>
+    <ul class={`list-none flex gap-x-3 text-base font-medium ${linkColor}`}>
       <li>
         <a href={t("navlink.home")}>{t("nav.home")}</a>
       </li>
