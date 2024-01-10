@@ -1,0 +1,41 @@
+---
+import { className } from "../utils/theme-functions.mjs";
+const { border, id, title, content } = Astro.props;
+---
+
+<div
+  class={`group relative accordion-item ${border} rounded-t-md`}
+>
+  <button
+    class={className(
+      "w-full flex justify-between gap-2 items-center flex-1 xl:text-lg text-[#15295a] font-bold",
+      "hover:text-primary p-3 sm:px-4 text-base-content text-left transition"
+    )}
+    aria-controls={`accordion-content-${id}`}
+    aria-expanded="false"
+    id={`accordion-button-${id}`}
+    type="button"
+  >
+    {title}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="h-6 w-6 accordion__chevron shrink-0 transition-transform"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+    </svg>
+  </button>
+  <div
+    class="duration-300 transition-all ease-in-out max-h-0 overflow-hidden px-3 sm:px-4 hidden"
+    aria-labelledby={`accordion-button-${id}`}
+    id={`accordion-content-${id}`}
+  >
+    <div class="mb-4 max-w-full mt-1 prose prose-base text-semibold transition-[height]" set:html={content} />
+  </div>
+</div>

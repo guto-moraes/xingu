@@ -1,0 +1,13 @@
+---
+const { year, check } = Astro.props;
+---
+
+<div class="relative">
+  <label class="absolute top-6 -left-[10px]" for={year}>{year}</label>
+  <input 
+    type="radio" 
+    name="time-year" 
+    id={year}
+    class={`form-radio accent-[#1E7BAE] ${check === "true" ? "animate-ping" : null}`}
+  />
+</div>

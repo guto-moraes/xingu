@@ -1,0 +1,27 @@
+---
+import Accordion from "../../components/Accordion.astro";
+const items = [
+    {
+        title: "Introdução",
+        content: "Contextualização do processo de integração do Brasil Central (décadas de 1940 a 1960)"
+    },
+    {
+        title: "Capítulo 1",
+        content: "Criação, objetivos, financiamento <br /> Obras realizadas em MT e Personagens importantes"
+    },
+    {
+        title: "Capítulo 3",
+        content: "A vanguarda: de Aragarças ao Rio das Mortes <br /> Trabalhadores (perfil) e o cotidiano da Expediação <br /> Do Rio das Mortes ao Xingu e o contato com os povos indígenas"
+    },
+    {
+        title: "Capítulo 3",
+        content: "O protagonismo dos Villas-Boas e a defesa dos povos indígenas <br /> A criação do Parque Nacional do Xingu"
+    },
+    {
+        title: "Capítulo 4",
+        content: "Preservação da memória e patrimônio <br /> A Associação de Pioneiros da Marcha para o Oeste em Nova Xavantina"
+    }                
+];
+---
+
+<Accordion items={items} />

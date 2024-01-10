@@ -4,16 +4,17 @@
   "nav.ebook": "E-books",
   "nav.experience-reports": "Experience Reports",
   "nav.resources": "Resources",
-  "nav.contact": "Contact",  
+  "nav.credits": "Credits",  
   "home.hello": "Hello, World!",
   "navlink.home": "./",
   "navlink.about": "./about-the-project",
   "navlink.ebook": "./ebooks",
   "navlink.experience-reports": "./experience-reports",
   "navlink.resources": "./resources",
-  "navlink.contact": "./contact",  
+  "navlink.credits": "./credits",  
   "lang.portuguese": "Portuguese",
   "lang.english": "English",
   "lang.spanish": "Spanish",  
-  "footer.copy": "Some rights reservads."
+  "footer.copy": "Some rights reservads.",
+  "ebook.content-list": "See what's inside"
 }

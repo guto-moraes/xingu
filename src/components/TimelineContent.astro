@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import { className } from "../utils/theme-functions.mjs";
+const { show, year, image, title, content } = Astro.props;
+---
+
+<div
+  id={`content-${year}`}
+  class={
+    className(
+        "absolute top-14 -left-full w-full h-96 transform transition duration-300 ease-in-out",
+        "-translate-x-full [&.show]:left-0 [&.show]:translate-x-0",
+        show === true ? "show" : null
+    )
+  }
+>
+  <div class="flex gap-x-6 w-full">
+    <div class="flex-initial w-[300px]">
+      <Image src={image} alt={title} title={title} width="300" height="300" />
+    </div>
+    <div class="flex flex-col">
+        <h2 class="text-2xl text-slate-950 font-bold" set:html={title} />
+        <p class="text-base text-slate-800" set:html={content} />
+    </divc>
+  </div>
+</div>
