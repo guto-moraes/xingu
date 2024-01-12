@@ -1,9 +1,88 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 import ResourcesBase from "./partials/ResourcesBase.astro";
+import TimeLine from "../components/Timeline.astro";
+import Photo_01 from "../assets/images/expedicao/base-uberlandia.jpg";
+import Photo_02 from "../assets/images/expedicao/marco-zero.jpg";
+import Photo_03 from "../assets/images/expedicao/base-rio-das-mortes.jpg";
+import Photo_04 from "../assets/images/expedicao/francisco-meireles-atracao.jpg";
+import Photo_05 from "../assets/images/expedicao/indigenas-Iaualapitis.jpg";
+
+const timeline = [
+  {
+    year: "1944",
+    title: "Primeira base da Expedição - Uberlândia/MG",
+    content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis hic tempora nostrum praesentium natus animi magni. Illum, accusantium itaque? Dolore, quaerat quasi minima deleniti molestiae ratione repellat nostrum iste suscipit voluptates dolor asperiores. Officiis iste dicta modi, facere doloremque laboriosam ratione earum id necessitatibus, maiores eum dignissimos? Fugit, dolor a!",
+    image: Photo_01,
+    credits: "Foto: Fundação Brasil Central/Museu da Fotografia Documental",
+  },  
+  {
+    year: "1944b",
+    title: "Marco Zero - Expedição Roncador-Xingu",
+    content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis hic tempora nostrum praesentium natus animi magni. Illum, accusantium itaque? Dolore, quaerat quasi minima deleniti molestiae ratione repellat nostrum iste suscipit voluptates dolor asperiores. Officiis iste dicta modi, facere doloremque laboriosam ratione earum id necessitatibus, maiores eum dignissimos? Fugit, dolor a!",
+    image: Photo_02,
+    credits: "Foto: Fundação Brasil Central/Museu da Fotografia Documental",
+  },
+  {
+    year: "1945",
+    title: "Casa da chefia, acampamento no Rio das Mortes, futura cidade de Xavantina/MT",
+    content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis hic tempora nostrum praesentium natus animi magni. Illum, accusantium itaque? Dolore, quaerat quasi minima deleniti molestiae ratione repellat nostrum iste suscipit voluptates dolor asperiores. Officiis iste dicta modi, facere doloremque laboriosam ratione earum id necessitatibus, maiores eum dignissimos? Fugit, dolor a!",
+    image: Photo_03,
+    credits: "Foto: Fundação Brasil Central/Museu da Fotografia Documental",
+  },
+  {
+    year: "1946",
+    title: "Sertanista Francisco Meireles, frente de contato e atração com indígenas",
+    content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis hic tempora nostrum praesentium natus animi magni. Illum, accusantium itaque? Dolore, quaerat quasi minima deleniti molestiae ratione repellat nostrum iste suscipit voluptates dolor asperiores. Officiis iste dicta modi, facere doloremque laboriosam ratione earum id necessitatibus, maiores eum dignissimos? Fugit, dolor a!",
+    image: Photo_04,
+    credits: "Foto: Fundação Brasil Central/Museu da Fotografia Documental",
+  },  
+  {
+    year: "1949",
+    title: "Indígenas Iaualapitis, 1949. Serra do Roncador/MT",
+    content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis hic tempora nostrum praesentium natus animi magni. Illum, accusantium itaque? Dolore, quaerat quasi minima deleniti molestiae ratione repellat nostrum iste suscipit voluptates dolor asperiores. Officiis iste dicta modi, facere doloremque laboriosam ratione earum id necessitatibus, maiores eum dignissimos? Fugit, dolor a!",
+    image: Photo_05,
+    credits: "Foto: José Medeiros/Acervo IMS",
+  },
+];
 ---
 
 <ResourcesBase>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non adipisci ullam maxime quidem ducimus reprehenderit culpa minima, fugiat possimus deleniti!
-    </p>
+    <div class="w-full h-full">
+        <div class="max-w-[1280px] mx-auto">
+            <div class="max-w-[750px] mx-auto text-center">
+                <h2 class="text-[#15295a] text-3xl font-extrabold mb-8">
+                  {t("resources.timeline")}
+                </h2>
+            </div>
+            <TimeLine items={timeline} />
+        </div>
+    </div>
 </ResourcesBase>
+
+<script>
+    const years = document.querySelectorAll('input[type="radio"]') as NodeListOf<HTMLElement>;
+    const contents = document.querySelectorAll('[id^="content-"]') as NodeListOf<HTMLElement>;
+  
+    years.forEach(item => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+          years.forEach(item => {
+              item.classList.remove("animate-ping");
+              contents.forEach(item => { 
+                  item.classList.remove("show");
+              })
+          });
+          if(item.classList.contains("animate-ping")){
+              item.classList.remove("animate-ping");
+          }else {
+              if((e.target as Element).id === item.id) {
+                  item.classList.add("animate-ping");
+                  document.querySelector(`#content-${item.id}`).classList.add("show")
+              }
+          }
+      });
+    });
+  </script>

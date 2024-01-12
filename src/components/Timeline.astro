@@ -4,9 +4,9 @@ import TimelineItem from "./TimelineItem.astro";
 import TimelineContent from "./TimelineContent.astro";
 ---
 
-<div class="relative w-full px-8">          
-    <hr class="absolute top-1/2 left-0 w-full h-[2px] my-auto bg-rose-500 -z-10">
-    <div class="flex gap-x-28 z-20">
+<div class="relative w-full h-[460px] p-10 bg-white rounded-xl shadow-xl overflow-hidden">          
+    <hr class="absolute top-[56px] left-8 right-8 h-0 border-t border-sky-500 border-dashed">
+    <div class="flex gap-x-20 z-20">
         {
             items.map((item: string, index: number) => {
               let check = index === 0 ? "true" : "false";
@@ -14,11 +14,11 @@ import TimelineContent from "./TimelineContent.astro";
             })
         }                
     </div>
-    <div class="absolute top-10 left-0 w-full">
+    <div class="absolute top-16 left-8 right-8 w-full">
         {
             items.map((item: string, index: number) => {
               let show = index === 0 ? true : false;
-              return <TimelineContent image={item["image"]} year={item["year"]} content={item["content"]} title={item["title"]} show={show} />
+              return <TimelineContent image={item["image"]} year={item["year"]} content={item["content"]} title={item["title"]} credits={item["credits"]} show={show} />
             })
         }   
     </div>

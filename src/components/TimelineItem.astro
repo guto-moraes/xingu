@@ -1,13 +1,41 @@
 ---
+import { className } from "../utils/theme-functions.mjs";
 const { year, check } = Astro.props;
 ---
 
 <div class="relative">
-  <label class="absolute top-6 -left-[10px]" for={year}>{year}</label>
-  <input 
-    type="radio" 
-    name="time-year" 
+  <label
+    class="absolute top-8 -left-[1px] text-[#083749] font-semibold"
+    for={year}>{year}</label
+  >
+  <input
+    type="radio"
+    name="time-year"
     id={year}
-    class={`form-radio accent-[#1E7BAE] ${check === "true" ? "animate-ping" : null}`}
+    class={className(check === "true" ? "animate-ping" : null)}
   />
 </div>
+
+<style>
+  :root {
+  --radio-border-color: rgb(16, 185, 129);
+}
+  input[type="radio"],
+  label + input[type="radio"] {
+    cursor: pointer;
+  }
+  input[type="radio"]{
+    position: relative;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  margin: 6px;
+  padding: 0;
+  border: 2px solid var(--radio-border-color);
+  border-radius: 50%;
+  appearance: none;
+  background-color: white;
+  outline: none;
+  transition: outline 0.1s;
+  }
+</style>

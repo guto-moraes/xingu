@@ -9,9 +9,11 @@ import TitlePage from "../../components/TitlePage.astro";
 
 <Layout title={t("nav.credits") + " | " + t("title")}>
   <WrapperPages>
-    <div class="box-content">
-      <TitlePage titlePage={t("nav.credits")} />
+    <div class="prose-lg max-w-[960px] h-full mx-auto my-10">
+      <div class="text-center">
+        <TitlePage titlePage={t("nav.credits")} />
+      </div>
+      <slot />
     </div>
-    <slot />
   </WrapperPages>
 </Layout>
