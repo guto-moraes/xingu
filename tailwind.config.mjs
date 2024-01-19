@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				roncador: 'url("./src/assets/images/serra-do-roncador.jpg")'
+				roncador: 'url("./assets/images/serra-do-roncador.jpg")'
 			},
 			gridTemplateRows: {
 				layout: "80px auto 48px",
