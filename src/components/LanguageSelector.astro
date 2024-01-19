@@ -8,7 +8,7 @@ import {
 const langUrl = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(langUrl);
 const t = useTranslations(langUrl);
-import { className, getCurrentLanguage } from "../utils/theme-functions.mjs";
+import { className, getCurrentLanguage } from "../utils/theme-functions.ts";
 import { Image } from "astro:assets";
 import brFlag from "../assets/images/br.png";
 import enFlag from "../assets/images/gb.png";

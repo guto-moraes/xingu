@@ -28,16 +28,17 @@ import Chapters from "./partials/Chapters.astro";
             link="/files/ebook-interativo.epub"
             text="E-book Interativo"
             textColor="text-white"
-            bgColor="bg-sky-500"
-            bgHoverColor="hover:bg-sky-600"
+            bgColor="bg-[#00BAC7]"
+            bgHoverColor="hover:bg-[#00ADB7]"
           />
           <ButtonLink
             link="/files/ebook.pdf"
             text="E-book em PDF"
-            textColor="text-sky-500"
+            textColor="text-[#00BAC7]"
+            textHoverColor="hover:text-[#00ADB7]"
             bgColor="bg-white"
-            bgHoverColor="hover:bg-sky-200"
-            borderColor="border-sky-500"
+            borderColor="border-[#00BAC7]"
+            borderHoverColor="hover:border-[#00ADB7]"
           />
         </div>
       </div>
@@ -58,7 +59,7 @@ import Chapters from "./partials/Chapters.astro";
         </a>
       </div>
     </div>
-    <section class="w-full my-28 py-24 transform -skew-y-3 bg-[#02afbf]">
+    <section class="w-full my-28 py-24 transform -skew-y-3 bg-[#00bac7]">
       <div class="max-w-[750px] mx-auto text-center transform skew-y-3">
         <span class="text-lg text-slate-950 font-bold mb-2 block">
           Um material pedagógico com foco no ensino-aprendizagem inovador
@@ -84,7 +85,7 @@ import Chapters from "./partials/Chapters.astro";
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-12 h-12 text-[#02afbf]"
+              class="w-12 h-12 text-[#00BAC7]"
             >
               <path
                 stroke-linecap="round"
@@ -108,7 +109,7 @@ import Chapters from "./partials/Chapters.astro";
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-12 h-12 text-[#02afbf]"
+              class="w-12 h-12 text-[#00BAC7]"
             >
               <path
                 stroke-linecap="round"
@@ -132,7 +133,7 @@ import Chapters from "./partials/Chapters.astro";
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-12 h-12 text-[#02afbf]"
+              class="w-12 h-12 text-[#00BAC7]"
             >
               <path
                 stroke-linecap="round"
@@ -156,7 +157,7 @@ import Chapters from "./partials/Chapters.astro";
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-12 h-12 text-[#02afbf]"
+              class="w-12 h-12 text-[#00BAC7]"
             >
               <path
                 stroke-linecap="round"
@@ -177,18 +178,20 @@ import Chapters from "./partials/Chapters.astro";
     </section>
     <section class="w-full my-40">
       <div class="max-w-[750px] mx-auto text-center">
-        <h2 class="text-[#083749] text-3xl font-extrabold sm:text-4xl md:text-[45px] mb-8">
+        <h2
+          class="text-[#083749] text-3xl font-extrabold sm:text-4xl md:text-[45px] mb-8"
+        >
           Como o e-book está organizado?
         </h2>
-     </div>
-     <div class="grid grid-cols-2 max-w-[1280px] mx-auto">
-      <div class="p-8">
-        <Chapters />
       </div>
-      <div class="p-8">
-        <h2>Outra imagem da capa do livro</h2>
+      <div class="grid grid-cols-2 max-w-[1280px] mx-auto">
+        <div class="p-8">
+          <Chapters />
+        </div>
+        <div class="p-8">
+          <h2>Outra imagem da capa do livro</h2>
+        </div>
       </div>
-    </div>
     </section>
     <section class="w-full my-28 bg-white">
       <div class="max-w-[1280px] mx-auto grid grid-cols-2 py-6 px-12">
@@ -212,8 +215,8 @@ import Chapters from "./partials/Chapters.astro";
             link="/files/ebook.pdf"
             text="Faça o download agora!"
             textColor="text-white"
-            bgColor="bg-sky-500"
-            bgHoverColor="hover:bg-sky-600"
+            bgColor="bg-[#00BAC7]"
+            bgHoverColor="hover:bg-[#00ADB7]"
           />
         </div>
       </div>

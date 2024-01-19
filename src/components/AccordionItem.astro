@@ -1,5 +1,5 @@
 ---
-import { className } from "../utils/theme-functions.mjs";
+import { className } from "../utils/theme-functions.ts";
 const { border, id, title, content } = Astro.props;
 ---
 
@@ -32,10 +32,10 @@ const { border, id, title, content } = Astro.props;
     </svg>
   </button>
   <div
-    class="duration-300 transition-all ease-in-out max-h-0 overflow-hidden px-3 sm:px-4 hidden"
+    class="duration-300 transition-all ease-in-out px-3 sm:px-4 hidden"
     aria-labelledby={`accordion-button-${id}`}
     id={`accordion-content-${id}`}
   >
-    <div class="mb-4 max-w-full mt-1 prose prose-base text-semibold transition-[height]" set:html={content} />
+    <div class="mb-4 max-w-full mt-1 prose prose-base text-[#2e3856] text-semibold transition-[height]" set:html={content} />
   </div>
 </div>

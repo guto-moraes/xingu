@@ -1,5 +1,5 @@
 ---
-import { className } from "../utils/theme-functions.mjs";
+import { className } from "../utils/theme-functions.ts";
 const {
   link,
   text,
@@ -8,6 +8,7 @@ const {
   bgColor,
   bgHoverColor = bgColor,
   borderColor = "border-transparent",
+  borderHoverColor = borderColor,
 } = Astro.props;
 ---
 
@@ -18,7 +19,7 @@ const {
   class={
     className(
       "w-max text-xl font-semibold py-2 px-5 rounded-md transition-colors duration-300 border-2",
-      textColor, textHoverColor, bgColor, bgHoverColor, borderColor
+      textColor, textHoverColor, bgColor, bgHoverColor, borderColor, borderHoverColor
     )
   }
 >
