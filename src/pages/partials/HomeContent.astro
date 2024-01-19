@@ -1,5 +1,4 @@
 ---
-import { className } from "../../utils/theme-functions.ts";
 import { Image } from "astro:assets";
 import ebook from "../../assets/images/ebook-cover.png";
 import fapemat from "../../assets/images/fapemat.png";
@@ -63,7 +62,13 @@ import ButtonLink from "../../components/ButtonLink.astro";
           Ainda como resultado deste projeto, foi elaborado um livro virtual, nos formatos Epub (interativo) e em PDF, cujo
           principal objetivo é o de servir como material pedagógico sobre a expedição e seus impactos no leste de Mato Grosso.
         </p>
-        <a type="button" href="/ebooks" title="Baixar E-books" class="btn-download w-full transform-colors duration-200">Baixar E-books</a>
+        <ButtonLink
+          link="/ebooks"
+          text="Baixar E-books"
+          textColor="text-white"
+          bgColor="bg-sky-500"
+          bgHoverColor="hover:bg-sky-600"
+        />
       </div>
       <div class="book-container py-4">
         <a href="./ebook" class="book-link">
